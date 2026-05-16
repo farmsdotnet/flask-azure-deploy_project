@@ -1,12 +1,9 @@
-document.getElementById('messageBtn').addEventListener('click', async () => {
+document.getElementById('apiBtn').addEventListener('click', async () => {
     try {
-        const response = await fetch('/api/message');
+        const response = await fetch('/api/hello');
         const data = await response.json();
-        const resultDiv = document.getElementById('result');
-        resultDiv.textContent = data.message;
-        resultDiv.style.display = 'block';
+        document.getElementById('response').textContent = data.message;
     } catch (error) {
-        document.getElementById('result').textContent = 'Error: ' + error.message;
-        document.getElementById('result').style.display = 'block';
+        document.getElementById('response').textContent = 'Error: ' + error.message;
     }
 });
