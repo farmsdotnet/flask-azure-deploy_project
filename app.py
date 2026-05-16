@@ -15,7 +15,7 @@ def home():
 @app.route('/api/hello', methods=['GET'])
 def api_hello():
     """Simple API endpoint."""
-    return jsonify({'message': 'Hello from Flask API!'})
+    return jsonify({'message': 'Famans Test Project - Hello from Flask API!'})
 
 @app.route('/health')
 def health_check():
